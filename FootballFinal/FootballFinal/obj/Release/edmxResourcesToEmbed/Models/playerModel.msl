@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PlayersModelStoreContainer" CdmEntityContainer="PlayersEntities">
+    <EntitySetMapping Name="players">
+      <EntityTypeMapping TypeName="PlayersModel.player">
+        <MappingFragment StoreEntitySet="player">
+          <ScalarProperty Name="playerId" ColumnName="playerId" />
+          <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="team" ColumnName="team" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stats">
+      <EntityTypeMapping TypeName="PlayersModel.stat">
+        <MappingFragment StoreEntitySet="stats">
+          <ScalarProperty Name="pointsScored" ColumnName="pointsScored" />
+          <ScalarProperty Name="gamesPlayed" ColumnName="gamesPlayed" />
+          <ScalarProperty Name="Player_playerId" ColumnName="Player_playerId" />
+          <ScalarProperty Name="rushingTDs" ColumnName="rushingTDs" />
+          <ScalarProperty Name="rushingYDs" ColumnName="rushingYDs" />
+          <ScalarProperty Name="fumblesLost" ColumnName="fumblesLost" />
+          <ScalarProperty Name="receptions" ColumnName="receptions" />
+          <ScalarProperty Name="receivingTDs" ColumnName="receivingTDs" />
+          <ScalarProperty Name="receivingYDs" ColumnName="receivingYDs" />
+          <ScalarProperty Name="passingYDs" ColumnName="passingYDs" />
+          <ScalarProperty Name="passingINTs" ColumnName="passingINTs" />
+          <ScalarProperty Name="passingTDs" ColumnName="passingTDs" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+          <ScalarProperty Name="statsID" ColumnName="statsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_QB">
+      <EntityTypeMapping TypeName="PlayersModel.V_QB">
+        <MappingFragment StoreEntitySet="V_QB">
+          <ScalarProperty Name="playerId" ColumnName="playerId" />
+          <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="team" ColumnName="team" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_QB1">
+      <EntityTypeMapping TypeName="PlayersModel.V_QB1">
+        <MappingFragment StoreEntitySet="V_QB1">
+          <ScalarProperty Name="playerId" ColumnName="playerId" />
+          <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="team" ColumnName="team" />
+          <ScalarProperty Name="pointsScored" ColumnName="pointsScored" />
+          <ScalarProperty Name="gamesPlayed" ColumnName="gamesPlayed" />
+          <ScalarProperty Name="Player_playerId" ColumnName="Player_playerId" />
+          <ScalarProperty Name="rushingTDs" ColumnName="rushingTDs" />
+          <ScalarProperty Name="rushingYDs" ColumnName="rushingYDs" />
+          <ScalarProperty Name="fumblesLost" ColumnName="fumblesLost" />
+          <ScalarProperty Name="receptions" ColumnName="receptions" />
+          <ScalarProperty Name="receivingTDs" ColumnName="receivingTDs" />
+          <ScalarProperty Name="receivingYDs" ColumnName="receivingYDs" />
+          <ScalarProperty Name="passingYDs" ColumnName="passingYDs" />
+          <ScalarProperty Name="passingINTs" ColumnName="passingINTs" />
+          <ScalarProperty Name="passingTDs" ColumnName="passingTDs" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+          <ScalarProperty Name="statsID" ColumnName="statsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_RB">
+      <EntityTypeMapping TypeName="PlayersModel.V_RB">
+        <MappingFragment StoreEntitySet="V_RB">
+          <ScalarProperty Name="playerId" ColumnName="playerId" />
+          <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="team" ColumnName="team" />
+          <ScalarProperty Name="pointsScored" ColumnName="pointsScored" />
+          <ScalarProperty Name="gamesPlayed" ColumnName="gamesPlayed" />
+          <ScalarProperty Name="Player_playerId" ColumnName="Player_playerId" />
+          <ScalarProperty Name="rushingTDs" ColumnName="rushingTDs" />
+          <ScalarProperty Name="rushingYDs" ColumnName="rushingYDs" />
+          <ScalarProperty Name="fumblesLost" ColumnName="fumblesLost" />
+          <ScalarProperty Name="receptions" ColumnName="receptions" />
+          <ScalarProperty Name="receivingTDs" ColumnName="receivingTDs" />
+          <ScalarProperty Name="receivingYDs" ColumnName="receivingYDs" />
+          <ScalarProperty Name="passingYDs" ColumnName="passingYDs" />
+          <ScalarProperty Name="passingINTs" ColumnName="passingINTs" />
+          <ScalarProperty Name="passingTDs" ColumnName="passingTDs" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+          <ScalarProperty Name="statsID" ColumnName="statsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_TE">
+      <EntityTypeMapping TypeName="PlayersModel.V_TE">
+        <MappingFragment StoreEntitySet="V_TE">
+          <ScalarProperty Name="playerId" ColumnName="playerId" />
+          <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="team" ColumnName="team" />
+          <ScalarProperty Name="pointsScored" ColumnName="pointsScored" />
+          <ScalarProperty Name="gamesPlayed" ColumnName="gamesPlayed" />
+          <ScalarProperty Name="Player_playerId" ColumnName="Player_playerId" />
+          <ScalarProperty Name="rushingTDs" ColumnName="rushingTDs" />
+          <ScalarProperty Name="rushingYDs" ColumnName="rushingYDs" />
+          <ScalarProperty Name="fumblesLost" ColumnName="fumblesLost" />
+          <ScalarProperty Name="receptions" ColumnName="receptions" />
+          <ScalarProperty Name="receivingTDs" ColumnName="receivingTDs" />
+          <ScalarProperty Name="receivingYDs" ColumnName="receivingYDs" />
+          <ScalarProperty Name="passingYDs" ColumnName="passingYDs" />
+          <ScalarProperty Name="passingINTs" ColumnName="passingINTs" />
+          <ScalarProperty Name="passingTDs" ColumnName="passingTDs" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+          <ScalarProperty Name="statsID" ColumnName="statsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_WR">
+      <EntityTypeMapping TypeName="PlayersModel.V_WR">
+        <MappingFragment StoreEntitySet="V_WR">
+          <ScalarProperty Name="playerId" ColumnName="playerId" />
+          <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="team" ColumnName="team" />
+          <ScalarProperty Name="pointsScored" ColumnName="pointsScored" />
+          <ScalarProperty Name="gamesPlayed" ColumnName="gamesPlayed" />
+          <ScalarProperty Name="Player_playerId" ColumnName="Player_playerId" />
+          <ScalarProperty Name="rushingTDs" ColumnName="rushingTDs" />
+          <ScalarProperty Name="rushingYDs" ColumnName="rushingYDs" />
+          <ScalarProperty Name="fumblesLost" ColumnName="fumblesLost" />
+          <ScalarProperty Name="receptions" ColumnName="receptions" />
+          <ScalarProperty Name="receivingTDs" ColumnName="receivingTDs" />
+          <ScalarProperty Name="receivingYDs" ColumnName="receivingYDs" />
+          <ScalarProperty Name="passingYDs" ColumnName="passingYDs" />
+          <ScalarProperty Name="passingINTs" ColumnName="passingINTs" />
+          <ScalarProperty Name="passingTDs" ColumnName="passingTDs" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+          <ScalarProperty Name="statsID" ColumnName="statsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_PlayersWithStats">
+      <EntityTypeMapping TypeName="PlayersModel.V_PlayersWithStats">
+        <MappingFragment StoreEntitySet="V_PlayersWithStats">
+          <ScalarProperty Name="gamesPlayed" ColumnName="gamesPlayed" />
+          <ScalarProperty Name="fumblesLost" ColumnName="fumblesLost" />
+          <ScalarProperty Name="receptions" ColumnName="receptions" />
+          <ScalarProperty Name="receivingYDs" ColumnName="receivingYDs" />
+          <ScalarProperty Name="receivingTDs" ColumnName="receivingTDs" />
+          <ScalarProperty Name="rushingYDs" ColumnName="rushingYDs" />
+          <ScalarProperty Name="rushingTDs" ColumnName="rushingTDs" />
+          <ScalarProperty Name="passingINTs" ColumnName="passingINTs" />
+          <ScalarProperty Name="passingYDs" ColumnName="passingYDs" />
+          <ScalarProperty Name="passingTDs" ColumnName="passingTDs" />
+          <ScalarProperty Name="pointsScored" ColumnName="pointsScored" />
+          <ScalarProperty Name="team" ColumnName="team" />
+          <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="position" ColumnName="position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_PlayersWithStatsChecker">
+      <EntityTypeMapping TypeName="PlayersModel.V_PlayersWithStatsChecker">
+        <MappingFragment StoreEntitySet="V_PlayersWithStatsChecker">
+          <ScalarProperty Name="gamesPlayed" ColumnName="gamesPlayed" />
+          <ScalarProperty Name="fumblesLost" ColumnName="fumblesLost" />
+          <ScalarProperty Name="receptions" ColumnName="receptions" />
+          <ScalarProperty Name="receivingYDs" ColumnName="receivingYDs" />
+          <ScalarProperty Name="receivingTDs" ColumnName="receivingTDs" />
+          <ScalarProperty Name="rushingYDs" ColumnName="rushingYDs" />
+          <ScalarProperty Name="rushingTDs" ColumnName="rushingTDs" />
+          <ScalarProperty Name="passingINTs" ColumnName="passingINTs" />
+          <ScalarProperty Name="passingYDs" ColumnName="passingYDs" />
+          <ScalarProperty Name="passingTDs" ColumnName="passingTDs" />
+          <ScalarProperty Name="pointsScored" ColumnName="pointsScored" />
+          <ScalarProperty Name="team" ColumnName="team" />
+          <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="position" ColumnName="position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_DakTest">
+      <EntityTypeMapping TypeName="PlayersModel.V_DakTest">
+        <MappingFragment StoreEntitySet="V_DakTest">
+          <ScalarProperty Name="gamesPlayed" ColumnName="gamesPlayed" />
+          <ScalarProperty Name="fumblesLost" ColumnName="fumblesLost" />
+          <ScalarProperty Name="receptions" ColumnName="receptions" />
+          <ScalarProperty Name="receivingYDs" ColumnName="receivingYDs" />
+          <ScalarProperty Name="receivingTDs" ColumnName="receivingTDs" />
+          <ScalarProperty Name="rushingYDs" ColumnName="rushingYDs" />
+          <ScalarProperty Name="rushingTDs" ColumnName="rushingTDs" />
+          <ScalarProperty Name="passingINTs" ColumnName="passingINTs" />
+          <ScalarProperty Name="passingYDs" ColumnName="passingYDs" />
+          <ScalarProperty Name="passingTDs" ColumnName="passingTDs" />
+          <ScalarProperty Name="pointsScored" ColumnName="pointsScored" />
+          <ScalarProperty Name="team" ColumnName="team" />
+          <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="position" ColumnName="position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

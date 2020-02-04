@@ -1,0 +1,111 @@
+﻿@model IEnumerable<FootballFinal.Models.stat>
+
+@{
+    ViewBag.Title = "Stats";
+}
+
+<h2>Stats</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.pointsScored)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gamesPlayed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rushingTDs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rushingYDs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fumblesLost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receptions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receivingTDs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receivingYDs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.passingYDs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.passingINTs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.passingTDs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Week)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.player.fName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.pointsScored)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gamesPlayed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rushingTDs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rushingYDs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fumblesLost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.receptions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.receivingTDs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.receivingYDs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.passingYDs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.passingINTs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.passingTDs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Week)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.player.fName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PlayersModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="player">
+    <Key>
+      <PropertyRef Name="playerId" />
+    </Key>
+    <Property Name="playerId" Type="Int32" Nullable="false" />
+    <Property Name="fName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lastName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="position" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="team" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="stats" Relationship="Self.fk_Stats_Player" FromRole="player" ToRole="stats" />
+  </EntityType>
+  <EntityType Name="stat">
+    <Key>
+      <PropertyRef Name="statsID" />
+    </Key>
+    <Property Name="pointsScored" Type="Int32" />
+    <Property Name="gamesPlayed" Type="Int32" />
+    <Property Name="Player_playerId" Type="Int32" Nullable="false" />
+    <Property Name="rushingTDs" Type="Int32" />
+    <Property Name="rushingYDs" Type="Int32" />
+    <Property Name="fumblesLost" Type="Int32" />
+    <Property Name="receptions" Type="Int32" />
+    <Property Name="receivingTDs" Type="Int32" />
+    <Property Name="receivingYDs" Type="Int32" />
+    <Property Name="passingYDs" Type="Int32" />
+    <Property Name="passingINTs" Type="Int32" />
+    <Property Name="passingTDs" Type="Int32" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="Week" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="statsID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="player" Relationship="Self.fk_Stats_Player" FromRole="stats" ToRole="player" />
+  </EntityType>
+  <Association Name="fk_Stats_Player">
+    <End Role="player" Type="Self.player" Multiplicity="1" />
+    <End Role="stats" Type="Self.stat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="player">
+        <PropertyRef Name="playerId" />
+      </Principal>
+      <Dependent Role="stats">
+        <PropertyRef Name="Player_playerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PlayersEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="players" EntityType="Self.player" />
+    <EntitySet Name="stats" EntityType="Self.stat" />
+    <AssociationSet Name="fk_Stats_Player" Association="Self.fk_Stats_Player">
+      <End Role="player" EntitySet="players" />
+      <End Role="stats" EntitySet="stats" />
+    </AssociationSet>
+    <EntitySet Name="V_PlayersWithStats" EntityType="PlayersModel.V_PlayersWithStats" />
+  </EntityContainer>
+  <EntityType Name="V_PlayersWithStats">
+    <Key>
+      <PropertyRef Name="position" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="fName" />
+      <PropertyRef Name="team" />
+    </Key>
+    <Property Name="position" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="lastName" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="fName" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="team" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="pointsScored" Type="Int32" />
+    <Property Name="passingTDs" Type="Int32" />
+    <Property Name="passingYDs" Type="Int32" />
+    <Property Name="passingINTs" Type="Int32" />
+    <Property Name="rushingTDs" Type="Int32" />
+    <Property Name="rushingYDs" Type="Int32" />
+    <Property Name="receivingTDs" Type="Int32" />
+    <Property Name="receivingYDs" Type="Int32" />
+    <Property Name="receptions" Type="Int32" />
+    <Property Name="fumblesLost" Type="Int32" />
+    <Property Name="gamesPlayed" Type="Int32" />
+  </EntityType>
+</Schema>

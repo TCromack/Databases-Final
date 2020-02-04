@@ -1,0 +1,130 @@
+﻿@model IEnumerable<FootballFinal.Models.V_PlayersWithStats>
+
+@{
+    ViewBag.Title = "Players With Stats";
+}
+
+<script type= "text/javascript" src="../Scripts/Filter.js">
+
+</script>
+<h2>Players With Stats</h2>
+
+
+
+<select id="filter">
+    <option value="ALL">
+        ALL
+    </option>
+    <option value="QB">
+        QB
+    </option>
+    <option value="RB">
+        RB
+    </option>
+    <option value="WR">
+        WR
+    </option>
+    <option value="TE">
+        TE
+    </option>
+</select>
+
+<input type="search" id="playerSearch">
+    
+<table class="table" id="playerTable">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.team)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pointsScored)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.passingTDs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.passingYDs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.passingINTs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rushingTDs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rushingYDs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receivingTDs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receivingYDs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receptions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fumblesLost)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr class="playerRow">
+    <td>
+        @Html.DisplayFor(modelItem => item.position)
+    </td>
+    <td class="playerFirstName">
+        @Html.DisplayFor(modelItem => item.fName)
+    </td>
+    <td class="playerLastName">
+        @Html.DisplayFor(modelItem => item.lastName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.team)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.pointsScored)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.passingTDs)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.passingYDs)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.passingINTs)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.rushingTDs)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.rushingYDs)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.receivingTDs)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.receivingYDs)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.receptions)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.fumblesLost)
+    </td>
+    
+    
+</tr>
+}
+
+</table>

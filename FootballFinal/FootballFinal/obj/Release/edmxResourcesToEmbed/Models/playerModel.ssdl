@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PlayersModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="player">
+    <Key>
+      <PropertyRef Name="playerId" />
+    </Key>
+    <Property Name="playerId" Type="int" Nullable="false" />
+    <Property Name="fName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="lastName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="position" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="team" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="stats">
+    <Key>
+      <PropertyRef Name="Player_playerId" />
+      <PropertyRef Name="statsID" />
+    </Key>
+    <Property Name="pointsScored" Type="int" />
+    <Property Name="gamesPlayed" Type="int" />
+    <Property Name="Player_playerId" Type="int" Nullable="false" />
+    <Property Name="rushingTDs" Type="int" />
+    <Property Name="rushingYDs" Type="int" />
+    <Property Name="fumblesLost" Type="int" />
+    <Property Name="receptions" Type="int" />
+    <Property Name="receivingTDs" Type="int" />
+    <Property Name="receivingYDs" Type="int" />
+    <Property Name="passingYDs" Type="int" />
+    <Property Name="passingINTs" Type="int" />
+    <Property Name="passingTDs" Type="int" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Week" Type="varchar" MaxLength="45" />
+    <Property Name="statsID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\USERS\TYLER\SOURCE\REPOS\FOOTBALLFINAL\FOOTBALLFINAL\APP_DATA\PLAYERS.MDF.dbo.V_DakTest' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="V_DakTest">
+    <Key>
+      <PropertyRef Name="position" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="fName" />
+      <PropertyRef Name="team" />
+    </Key>
+    <Property Name="position" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="lastName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="fName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="team" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="pointsScored" Type="int" />
+    <Property Name="passingTDs" Type="int" />
+    <Property Name="passingYDs" Type="int" />
+    <Property Name="passingINTs" Type="int" />
+    <Property Name="rushingTDs" Type="int" />
+    <Property Name="rushingYDs" Type="int" />
+    <Property Name="receivingTDs" Type="int" />
+    <Property Name="receivingYDs" Type="int" />
+    <Property Name="receptions" Type="int" />
+    <Property Name="fumblesLost" Type="int" />
+    <Property Name="gamesPlayed" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\USERS\TYLER\SOURCE\REPOS\FOOTBALLFINAL\FOOTBALLFINAL\APP_DATA\PLAYERS.MDF.dbo.V_PlayersWithStats' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="V_PlayersWithStats">
+    <Key>
+      <PropertyRef Name="position" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="fName" />
+      <PropertyRef Name="team" />
+    </Key>
+    <Property Name="position" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="lastName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="fName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="team" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="pointsScored" Type="int" />
+    <Property Name="passingTDs" Type="int" />
+    <Property Name="passingYDs" Type="int" />
+    <Property Name="passingINTs" Type="int" />
+    <Property Name="rushingTDs" Type="int" />
+    <Property Name="rushingYDs" Type="int" />
+    <Property Name="receivingTDs" Type="int" />
+    <Property Name="receivingYDs" Type="int" />
+    <Property Name="receptions" Type="int" />
+    <Property Name="fumblesLost" Type="int" />
+    <Property Name="gamesPlayed" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\USERS\TYLER\SOURCE\REPOS\FOOTBALLFINAL\FOOTBALLFINAL\APP_DATA\PLAYERS.MDF.dbo.V_PlayersWithStatsChecker' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="V_PlayersWithStatsChecker">
+    <Key>
+      <PropertyRef Name="position" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="fName" />
+      <PropertyRef Name="team" />
+    </Key>
+    <Property Name="position" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="lastName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="fName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="team" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="pointsScored" Type="int" />
+    <Property Name="passingTDs" Type="int" />
+    <Property Name="passingYDs" Type="int" />
+    <Property Name="passingINTs" Type="int" />
+    <Property Name="rushingTDs" Type="int" />
+    <Property Name="rushingYDs" Type="int" />
+    <Property Name="receivingTDs" Type="int" />
+    <Property Name="receivingYDs" Type="int" />
+    <Property Name="receptions" Type="int" />
+    <Property Name="fumblesLost" Type="int" />
+    <Property Name="gamesPlayed" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\USERS\TYLER\SOURCE\REPOS\FOOTBALLFINAL\FOOTBALLFINAL\APP_DATA\PLAYERS.MDF.dbo.V_QB' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="V_QB">
+    <Key>
+      <PropertyRef Name="playerId" />
+      <PropertyRef Name="fName" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="position" />
+      <PropertyRef Name="team" />
+    </Key>
+    <Property Name="playerId" Type="int" Nullable="false" />
+    <Property Name="fName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="lastName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="position" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="team" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\USERS\TYLER\SOURCE\REPOS\FOOTBALLFINAL\FOOTBALLFINAL\APP_DATA\PLAYERS.MDF.dbo.V_QB1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="V_QB1">
+    <Key>
+      <PropertyRef Name="playerId" />
+      <PropertyRef Name="fName" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="position" />
+      <PropertyRef Name="team" />
+      <PropertyRef Name="Player_playerId" />
+      <PropertyRef Name="statsID" />
+    </Key>
+    <Property Name="playerId" Type="int" Nullable="false" />
+    <Property Name="fName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="lastName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="position" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="team" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="pointsScored" Type="int" />
+    <Property Name="gamesPlayed" Type="int" />
+    <Property Name="Player_playerId" Type="int" Nullable="false" />
+    <Property Name="rushingTDs" Type="int" />
+    <Property Name="rushingYDs" Type="int" />
+    <Property Name="fumblesLost" Type="int" />
+    <Property Name="receptions" Type="int" />
+    <Property Name="receivingTDs" Type="int" />
+    <Property Name="receivingYDs" Type="int" />
+    <Property Name="passingYDs" Type="int" />
+    <Property Name="passingINTs" Type="int" />
+    <Property Name="passingTDs" Type="int" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Week" Type="varchar" MaxLength="45" />
+    <Property Name="statsID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\USERS\TYLER\SOURCE\REPOS\FOOTBALLFINAL\FOOTBALLFINAL\APP_DATA\PLAYERS.MDF.dbo.V_RB' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="V_RB">
+    <Key>
+      <PropertyRef Name="playerId" />
+      <PropertyRef Name="fName" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="position" />
+      <PropertyRef Name="team" />
+      <PropertyRef Name="Player_playerId" />
+      <PropertyRef Name="statsID" />
+    </Key>
+    <Property Name="playerId" Type="int" Nullable="false" />
+    <Property Name="fName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="lastName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="position" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="team" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="pointsScored" Type="int" />
+    <Property Name="gamesPlayed" Type="int" />
+    <Property Name="Player_playerId" Type="int" Nullable="false" />
+    <Property Name="rushingTDs" Type="int" />
+    <Property Name="rushingYDs" Type="int" />
+    <Property Name="fumblesLost" Type="int" />
+    <Property Name="receptions" Type="int" />
+    <Property Name="receivingTDs" Type="int" />
+    <Property Name="receivingYDs" Type="int" />
+    <Property Name="passingYDs" Type="int" />
+    <Property Name="passingINTs" Type="int" />
+    <Property Name="passingTDs" Type="int" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Week" Type="varchar" MaxLength="45" />
+    <Property Name="statsID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\USERS\TYLER\SOURCE\REPOS\FOOTBALLFINAL\FOOTBALLFINAL\APP_DATA\PLAYERS.MDF.dbo.V_TE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="V_TE">
+    <Key>
+      <PropertyRef Name="playerId" />
+      <PropertyRef Name="fName" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="position" />
+      <PropertyRef Name="team" />
+      <PropertyRef Name="Player_playerId" />
+      <PropertyRef Name="statsID" />
+    </Key>
+    <Property Name="playerId" Type="int" Nullable="false" />
+    <Property Name="fName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="lastName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="position" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="team" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="pointsScored" Type="int" />
+    <Property Name="gamesPlayed" Type="int" />
+    <Property Name="Player_playerId" Type="int" Nullable="false" />
+    <Property Name="rushingTDs" Type="int" />
+    <Property Name="rushingYDs" Type="int" />
+    <Property Name="fumblesLost" Type="int" />
+    <Property Name="receptions" Type="int" />
+    <Property Name="receivingTDs" Type="int" />
+    <Property Name="receivingYDs" Type="int" />
+    <Property Name="passingYDs" Type="int" />
+    <Property Name="passingINTs" Type="int" />
+    <Property Name="passingTDs" Type="int" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Week" Type="varchar" MaxLength="45" />
+    <Property Name="statsID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\USERS\TYLER\SOURCE\REPOS\FOOTBALLFINAL\FOOTBALLFINAL\APP_DATA\PLAYERS.MDF.dbo.V_WR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="V_WR">
+    <Key>
+      <PropertyRef Name="playerId" />
+      <PropertyRef Name="fName" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="position" />
+      <PropertyRef Name="team" />
+      <PropertyRef Name="Player_playerId" />
+      <PropertyRef Name="statsID" />
+    </Key>
+    <Property Name="playerId" Type="int" Nullable="false" />
+    <Property Name="fName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="lastName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="position" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="team" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="pointsScored" Type="int" />
+    <Property Name="gamesPlayed" Type="int" />
+    <Property Name="Player_playerId" Type="int" Nullable="false" />
+    <Property Name="rushingTDs" Type="int" />
+    <Property Name="rushingYDs" Type="int" />
+    <Property Name="fumblesLost" Type="int" />
+    <Property Name="receptions" Type="int" />
+    <Property Name="receivingTDs" Type="int" />
+    <Property Name="receivingYDs" Type="int" />
+    <Property Name="passingYDs" Type="int" />
+    <Property Name="passingINTs" Type="int" />
+    <Property Name="passingTDs" Type="int" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Week" Type="varchar" MaxLength="45" />
+    <Property Name="statsID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_Stats_Player">
+    <End Role="player" Type="Self.player" Multiplicity="1" />
+    <End Role="stats" Type="Self.stats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="player">
+        <PropertyRef Name="playerId" />
+      </Principal>
+      <Dependent Role="stats">
+        <PropertyRef Name="Player_playerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PlayersModelStoreContainer">
+    <EntitySet Name="player" EntityType="Self.player" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="stats" EntityType="Self.stats" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="V_DakTest" EntityType="Self.V_DakTest" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[V_DakTest].[position] AS [position], 
+[V_DakTest].[lastName] AS [lastName], 
+[V_DakTest].[fName] AS [fName], 
+[V_DakTest].[team] AS [team], 
+[V_DakTest].[pointsScored] AS [pointsScored], 
+[V_DakTest].[passingTDs] AS [passingTDs], 
+[V_DakTest].[passingYDs] AS [passingYDs], 
+[V_DakTest].[passingINTs] AS [passingINTs], 
+[V_DakTest].[rushingTDs] AS [rushingTDs], 
+[V_DakTest].[rushingYDs] AS [rushingYDs], 
+[V_DakTest].[receivingTDs] AS [receivingTDs], 
+[V_DakTest].[receivingYDs] AS [receivingYDs], 
+[V_DakTest].[receptions] AS [receptions], 
+[V_DakTest].[fumblesLost] AS [fumblesLost], 
+[V_DakTest].[gamesPlayed] AS [gamesPlayed]
+FROM [dbo].[V_DakTest] AS [V_DakTest]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="V_PlayersWithStats" EntityType="Self.V_PlayersWithStats" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[V_PlayersWithStats].[position] AS [position], 
+[V_PlayersWithStats].[lastName] AS [lastName], 
+[V_PlayersWithStats].[fName] AS [fName], 
+[V_PlayersWithStats].[team] AS [team], 
+[V_PlayersWithStats].[pointsScored] AS [pointsScored], 
+[V_PlayersWithStats].[passingTDs] AS [passingTDs], 
+[V_PlayersWithStats].[passingYDs] AS [passingYDs], 
+[V_PlayersWithStats].[passingINTs] AS [passingINTs], 
+[V_PlayersWithStats].[rushingTDs] AS [rushingTDs], 
+[V_PlayersWithStats].[rushingYDs] AS [rushingYDs], 
+[V_PlayersWithStats].[receivingTDs] AS [receivingTDs], 
+[V_PlayersWithStats].[receivingYDs] AS [receivingYDs], 
+[V_PlayersWithStats].[receptions] AS [receptions], 
+[V_PlayersWithStats].[fumblesLost] AS [fumblesLost], 
+[V_PlayersWithStats].[gamesPlayed] AS [gamesPlayed]
+FROM [dbo].[V_PlayersWithStats] AS [V_PlayersWithStats]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="V_PlayersWithStatsChecker" EntityType="Self.V_PlayersWithStatsChecker" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[V_PlayersWithStatsChecker].[position] AS [position], 
+[V_PlayersWithStatsChecker].[lastName] AS [lastName], 
+[V_PlayersWithStatsChecker].[fName] AS [fName], 
+[V_PlayersWithStatsChecker].[team] AS [team], 
+[V_PlayersWithStatsChecker].[pointsScored] AS [pointsScored], 
+[V_PlayersWithStatsChecker].[passingTDs] AS [passingTDs], 
+[V_PlayersWithStatsChecker].[passingYDs] AS [passingYDs], 
+[V_PlayersWithStatsChecker].[passingINTs] AS [passingINTs], 
+[V_PlayersWithStatsChecker].[rushingTDs] AS [rushingTDs], 
+[V_PlayersWithStatsChecker].[rushingYDs] AS [rushingYDs], 
+[V_PlayersWithStatsChecker].[receivingTDs] AS [receivingTDs], 
+[V_PlayersWithStatsChecker].[receivingYDs] AS [receivingYDs], 
+[V_PlayersWithStatsChecker].[receptions] AS [receptions], 
+[V_PlayersWithStatsChecker].[fumblesLost] AS [fumblesLost], 
+[V_PlayersWithStatsChecker].[gamesPlayed] AS [gamesPlayed]
+FROM [dbo].[V_PlayersWithStatsChecker] AS [V_PlayersWithStatsChecker]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="V_QB" EntityType="Self.V_QB" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[V_QB].[playerId] AS [playerId], 
+[V_QB].[fName] AS [fName], 
+[V_QB].[lastName] AS [lastName], 
+[V_QB].[position] AS [position], 
+[V_QB].[team] AS [team]
+FROM [dbo].[V_QB] AS [V_QB]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="V_QB1" EntityType="Self.V_QB1" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[V_QB1].[playerId] AS [playerId], 
+[V_QB1].[fName] AS [fName], 
+[V_QB1].[lastName] AS [lastName], 
+[V_QB1].[position] AS [position], 
+[V_QB1].[team] AS [team], 
+[V_QB1].[pointsScored] AS [pointsScored], 
+[V_QB1].[gamesPlayed] AS [gamesPlayed], 
+[V_QB1].[Player_playerId] AS [Player_playerId], 
+[V_QB1].[rushingTDs] AS [rushingTDs], 
+[V_QB1].[rushingYDs] AS [rushingYDs], 
+[V_QB1].[fumblesLost] AS [fumblesLost], 
+[V_QB1].[receptions] AS [receptions], 
+[V_QB1].[receivingTDs] AS [receivingTDs], 
+[V_QB1].[receivingYDs] AS [receivingYDs], 
+[V_QB1].[passingYDs] AS [passingYDs], 
+[V_QB1].[passingINTs] AS [passingINTs], 
+[V_QB1].[passingTDs] AS [passingTDs], 
+[V_QB1].[Year] AS [Year], 
+[V_QB1].[Week] AS [Week], 
+[V_QB1].[statsID] AS [statsID]
+FROM [dbo].[V_QB1] AS [V_QB1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="V_RB" EntityType="Self.V_RB" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[V_RB].[playerId] AS [playerId], 
+[V_RB].[fName] AS [fName], 
+[V_RB].[lastName] AS [lastName], 
+[V_RB].[position] AS [position], 
+[V_RB].[team] AS [team], 
+[V_RB].[pointsScored] AS [pointsScored], 
+[V_RB].[gamesPlayed] AS [gamesPlayed], 
+[V_RB].[Player_playerId] AS [Player_playerId], 
+[V_RB].[rushingTDs] AS [rushingTDs], 
+[V_RB].[rushingYDs] AS [rushingYDs], 
+[V_RB].[fumblesLost] AS [fumblesLost], 
+[V_RB].[receptions] AS [receptions], 
+[V_RB].[receivingTDs] AS [receivingTDs], 
+[V_RB].[receivingYDs] AS [receivingYDs], 
+[V_RB].[passingYDs] AS [passingYDs], 
+[V_RB].[passingINTs] AS [passingINTs], 
+[V_RB].[passingTDs] AS [passingTDs], 
+[V_RB].[Year] AS [Year], 
+[V_RB].[Week] AS [Week], 
+[V_RB].[statsID] AS [statsID]
+FROM [dbo].[V_RB] AS [V_RB]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="V_TE" EntityType="Self.V_TE" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[V_TE].[playerId] AS [playerId], 
+[V_TE].[fName] AS [fName], 
+[V_TE].[lastName] AS [lastName], 
+[V_TE].[position] AS [position], 
+[V_TE].[team] AS [team], 
+[V_TE].[pointsScored] AS [pointsScored], 
+[V_TE].[gamesPlayed] AS [gamesPlayed], 
+[V_TE].[Player_playerId] AS [Player_playerId], 
+[V_TE].[rushingTDs] AS [rushingTDs], 
+[V_TE].[rushingYDs] AS [rushingYDs], 
+[V_TE].[fumblesLost] AS [fumblesLost], 
+[V_TE].[receptions] AS [receptions], 
+[V_TE].[receivingTDs] AS [receivingTDs], 
+[V_TE].[receivingYDs] AS [receivingYDs], 
+[V_TE].[passingYDs] AS [passingYDs], 
+[V_TE].[passingINTs] AS [passingINTs], 
+[V_TE].[passingTDs] AS [passingTDs], 
+[V_TE].[Year] AS [Year], 
+[V_TE].[Week] AS [Week], 
+[V_TE].[statsID] AS [statsID]
+FROM [dbo].[V_TE] AS [V_TE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="V_WR" EntityType="Self.V_WR" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[V_WR].[playerId] AS [playerId], 
+[V_WR].[fName] AS [fName], 
+[V_WR].[lastName] AS [lastName], 
+[V_WR].[position] AS [position], 
+[V_WR].[team] AS [team], 
+[V_WR].[pointsScored] AS [pointsScored], 
+[V_WR].[gamesPlayed] AS [gamesPlayed], 
+[V_WR].[Player_playerId] AS [Player_playerId], 
+[V_WR].[rushingTDs] AS [rushingTDs], 
+[V_WR].[rushingYDs] AS [rushingYDs], 
+[V_WR].[fumblesLost] AS [fumblesLost], 
+[V_WR].[receptions] AS [receptions], 
+[V_WR].[receivingTDs] AS [receivingTDs], 
+[V_WR].[receivingYDs] AS [receivingYDs], 
+[V_WR].[passingYDs] AS [passingYDs], 
+[V_WR].[passingINTs] AS [passingINTs], 
+[V_WR].[passingTDs] AS [passingTDs], 
+[V_WR].[Year] AS [Year], 
+[V_WR].[Week] AS [Week], 
+[V_WR].[statsID] AS [statsID]
+FROM [dbo].[V_WR] AS [V_WR]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="fk_Stats_Player" Association="Self.fk_Stats_Player">
+      <End Role="player" EntitySet="player" />
+      <End Role="stats" EntitySet="stats" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
